@@ -6831,8 +6831,9 @@
                 var pp = el.offsetParent != null ? this.getStyle(el.offsetParent, "position") : "static",
                     p = this.getStyle(el, "position");
                 if (p !== "absolute" && p !== "fixed" && pp !== "absolute" && pp !== "fixed") {
-                    out.left -= container.scrollLeft;
-                    out.top -= container.scrollTop;
+                    // TOBY - this seems to break scrolling - might be React related?
+                    // out.left -= container.scrollLeft;
+                    // out.top -= container.scrollTop;
                 }
             }
             return out;
@@ -7932,7 +7933,7 @@
                                 // IF the connection should be reattached, or the other endpoint refuses detach, then
                                 // reset the connection to its original state
                                 //if (jpc.isReattach() || jpc._forceReattach || jpc._forceDetach || !jpc.endpoints[idx === 0 ? 1 : 0].detach({connection:jpc, ignoreTarget:false, forceDetach:false, fireEvent:true, originalEvent:originalEvent, endpointBeingDeleted:true})) {
-                                if (jpc.isReattach() || jpc._forceReattach || jpc._forceDetach || !_jsPlumb.deleteConnection(jpc)) {
+                                if (jpc.isReattach() || jpc._forceReattach || jpc._forceDetach || !_jsPlumb.deleteConnection(jpc, originalEvent)) {
 
                                     jpc.setHover(false);
                                     jpc._forceDetach = null;

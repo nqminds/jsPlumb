@@ -475,8 +475,9 @@
                 var pp = el.offsetParent != null ? this.getStyle(el.offsetParent, "position") : "static",
                     p = this.getStyle(el, "position");
                 if (p !== "absolute" && p !== "fixed" && pp !== "absolute" && pp !== "fixed") {
-                    out.left -= container.scrollLeft;
-                    out.top -= container.scrollTop;
+                    // TOBY - this seems to break scrolling - might be React related?
+                    // out.left -= container.scrollLeft;
+                    // out.top -= container.scrollTop;
                 }
             }
             return out;

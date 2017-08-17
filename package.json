@@ -1,5 +1,5 @@
 {
-  "name": "jsplumb",
+  "name": "nqm-jsplumb",
   "version": "2.4.3",
   "description": "Visual connectivity for webapps",
   "main": "dist/js/jsplumb.js",
@@ -14,11 +14,11 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "init":"node ./install.js"
+    "init": "node ./install.js"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/jsplumb/jsPlumb.git"
+    "url": "git://github.com/nqminds/nqm-jsplumb.git"
   },
   "keywords": [
     "javascript",
@@ -29,7 +29,7 @@
   "author": "jsPlumb",
   "license": "(MIT OR GPL-2.0)",
   "devDependencies": {
-    "morgan":"1.8.0",
+    "morgan": "1.8.0",
     "biltong": "^0.4.0",
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
@@ -48,5 +48,4 @@
     "katavorio": "^0.19.2",
     "mottle": "^0.8.0"
   }
-
 }
