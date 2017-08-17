@@ -2,7 +2,7 @@
     "project": {
         "name": "nqm-jsplumb - Test Coverage",
         "description": "Visual connectivity for webapps",
-        "version": "2.4.3",
+        "version": "2.4.4",
         "url": ""
     },
     "files": {
