@@ -475,7 +475,10 @@
                 var pp = el.offsetParent != null ? this.getStyle(el.offsetParent, "position") : "static",
                     p = this.getStyle(el, "position");
                 if (p !== "absolute" && p !== "fixed" && pp !== "absolute" && pp !== "fixed") {
-                    // TOBY - this seems to break scrolling - might be React related?
+                    //
+                    // TOBY - this seems to break scrolling - might be React-related, or the fact that we're not using
+                    // jsplumb draggable for element positioning...
+                    //
                     // out.left -= container.scrollLeft;
                     // out.top -= container.scrollTop;
                 }
